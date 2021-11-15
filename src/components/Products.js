@@ -4,9 +4,11 @@ import style from "../resources/products.css";
 
 export default function Products() {
   const [prod, setProd] = useState([]);
+
   useEffect(() => {
     getData();
   }, []);
+
   const getData = async () => {
     const response = await fetch("https://fakestoreapi.com/products");
 
