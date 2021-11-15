@@ -20,8 +20,9 @@ export default function Products() {
       {prod.map((prods) => (
         <CardProduct
           key={prods.title}
-          desc={prods.description}
+          title={prods.title}
           image={prods.image}
+          price={prods.price}
         />
       ))}
     </div>
