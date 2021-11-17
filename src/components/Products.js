@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CardProduct from "./Card";
 import style from "../resources/products.css";
 
-export default function Products() {
+export default function Products(props) {
   const [prod, setProd] = useState([]);
 
   useEffect(() => {
@@ -25,6 +25,8 @@ export default function Products() {
           title={prods.title}
           image={prods.image}
           price={prods.price}
+          updateCartCount={props.updateCartCount}
+          rewindCarCount={props.rewindCarCount}
         />
       ))}
     </div>

@@ -3,12 +3,23 @@ import Navb from "./components/Navbar";
 import Products from "./components/Products";
 
 function App() {
-  const [cartCount, setCartCount] = useState([0]);
+  let [cartCount, setCartCount] = useState(0);
+  const updateCartCount = () => {
+    setCartCount(cartCount + 1);
+    console.log(cartCount);
+  };
+
+  const rewindCarCount = (rewindCount) => {
+    setCartCount(cartCount - rewindCount);
+  };
 
   return (
     <div className="App">
       <Navb cartCount={cartCount} />
-      <Products />
+      <Products
+        updateCartCount={updateCartCount}
+        rewindCarCount={rewindCarCount}
+      />
     </div>
   );
 }

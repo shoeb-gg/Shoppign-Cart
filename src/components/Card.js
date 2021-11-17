@@ -6,9 +6,16 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRedo } from "@fortawesome/free-solid-svg-icons";
 
-const CardProduct = ({ title, image, price }) => {
+const CardProduct = ({
+  title,
+  image,
+  price,
+  updateCartCount,
+  rewindCarCount,
+}) => {
   const [count, setCount] = useState("Add to Cart");
   const handleClick = () => {
+    updateCartCount();
     if (count === "Add to Cart") {
       setCount(parseInt(1));
       return;
@@ -16,6 +23,7 @@ const CardProduct = ({ title, image, price }) => {
     setCount(count + 1);
   };
   const redoCount = () => {
+    rewindCarCount(count);
     setCount("Add to Cart");
   };
   price = 10 * Math.ceil(price);
