@@ -35,6 +35,7 @@
   height: 150px;
   font-size: 18px;
   align-self: center;
+  z-index: 1;
 }
 
 .pri {
@@ -49,4 +50,22 @@
   width: 180px;
   font-size: 20px;
   text-align: center;
+}
+.des {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: rgb(214, 214, 214);
+  color: rgb(0, 0, 0);
+  border-radius: 8px;
+}
+.txt:hover .des {
+  visibility: visible;
+  z-index: 3;
 }

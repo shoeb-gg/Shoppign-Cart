@@ -12,6 +12,7 @@ const CardProduct = ({
   price,
   updateCartCount,
   rewindCarCount,
+  desc,
 }) => {
   const [count, setCount] = useState("Add to Cart");
   const handleClick = () => {
@@ -29,8 +30,10 @@ const CardProduct = ({
   price = 10 * Math.ceil(price);
   return (
     <div className="c">
+      <div className="des">{desc}</div>
       <Card className="text-center" className="cStyle">
         <Card.Img variant="top" src={image} className="cImg" />
+
         <Card.Body className="txt">
           <Card.Text className="ti">{title}</Card.Text>
           <Card.Text className="pri">{price}/=</Card.Text>

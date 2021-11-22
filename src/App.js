@@ -17,6 +17,7 @@ function App() {
     <div className="App">
       <Navb cartCount={cartCount} />
       <Products
+        className=""
         updateCartCount={updateCartCount}
         rewindCarCount={rewindCarCount}
       />

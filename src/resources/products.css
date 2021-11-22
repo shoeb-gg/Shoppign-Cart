@@ -4,3 +4,14 @@
   justify-content: center;
   margin-top: 100px;
 }
+.pagi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pagiButton {
+  width: 100px;
+  text-align: center;
+  font-size: 22px;
+}
