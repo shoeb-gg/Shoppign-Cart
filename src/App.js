@@ -10,6 +10,7 @@ function App() {
   };
 
   const rewindCarCount = (rewindCount) => {
+    if (cartCount === 0) return;
     setCartCount(cartCount - rewindCount);
   };
 
