@@ -11,6 +11,7 @@ export default function Products(props) {
 
   useEffect(() => {
     getData();
+    // eslint-disable-next-line
   }, []);
 
   const getData = async () => {
