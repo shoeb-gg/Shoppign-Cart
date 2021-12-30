@@ -5,12 +5,13 @@
 }
 
 .cStyle {
+  background-color: #f0fffe;
   width: 10rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   transition: 0.5s;
   padding: 5px;
   width: 300px;
-  height: 500px;
+  height: 478px;
 }
 
 .cStyle:hover {
@@ -18,9 +19,10 @@
 }
 
 .cImg {
+  border-radius: 6px;
   transition: transform 0.2s;
-  width: 250px;
-  height: 280px;
+  width: 280px;
+  height: 300px;
   align-self: center;
 }
 
@@ -29,22 +31,36 @@
 }
 
 .txt {
-  position: relative;
+  margin: 0px;
+  padding: 0;
+  padding-top: 15px;
   text-align: center;
-  width: 290px;
-  height: 150px;
-  font-size: 18px;
+  width: 295px;
+  height: 105px;
   align-self: center;
-  z-index: 1;
+}
+.ti {
+  font-size: 19px;
+  margin: 0px;
+  font-weight: bold;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 23px; /* fallback */
+  height: 50px; /* fallback */
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 
 .pri {
-  font-size: 20px;
+  margin-top: 15px;
+  font-size: 22px;
   font-weight: bold;
-  position: absolute;
   bottom: 3%;
   left: 40%;
-  align-self: center;
+  text-align: center;
+  line-height: 40px;
 }
 .bton {
   width: 180px;
