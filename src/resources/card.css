@@ -17,17 +17,35 @@
 .cStyle:hover {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.7);
 }
-
-.cImg {
-  border-radius: 6px;
-  transition: transform 0.2s;
+.imageAndDes {
+  position: relative;
   width: 280px;
   height: 300px;
   align-self: center;
 }
-
-.cImg:hover {
-  transform: scale(1.2);
+.cImg {
+  display: block;
+  border-radius: 6px;
+  transition: transform 0.2s;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  opacity: 1;
+}
+.des {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  opacity: 0;
+  background-color: white;
+}
+.des:hover {
+  opacity: 1;
 }
 
 .txt {
@@ -67,20 +85,7 @@
   font-size: 20px;
   text-align: center;
 }
-.des {
-  position: absolute;
-  visibility: hidden;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  background-color: rgb(214, 214, 214);
-  color: rgb(0, 0, 0);
-  border-radius: 8px;
-}
+
 .txt:hover .des {
   visibility: visible;
   z-index: 3;

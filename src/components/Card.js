@@ -30,9 +30,12 @@ const CardProduct = ({
   price = 10 * Math.ceil(price);
   return (
     <div className="c">
-      <div className="des">{desc}</div>
+      
       <Card className="text-center" className="cStyle">
-        <Card.Img variant="top" src={image} className="cImg" />
+        <div className="imageAndDes">
+          <div className="des">{desc}</div>
+          <Card.Img variant="top" src={image} className="cImg" />
+        </div>
 
         <Card.Body className="txt">
           <Card.Text className="ti">{title}</Card.Text>
