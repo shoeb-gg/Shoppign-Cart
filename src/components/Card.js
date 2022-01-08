@@ -28,12 +28,14 @@ const CardProduct = ({
     setCount("Add to Cart");
   };
   price = 10 * Math.ceil(price);
+
   return (
     <div className="c">
-      
       <Card className="text-center" className="cStyle">
         <div className="imageAndDes">
-          <div className="des">{desc}</div>
+          <div className="des">
+            <div className="desText">{desc}</div>
+          </div>
           <Card.Img variant="top" src={image} className="cImg" />
         </div>
 
