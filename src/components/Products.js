@@ -15,8 +15,7 @@ export default function Products(props) {
   }, []);
 
   const getData = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
-
+    const response = await fetch("https://cartofshoebapi.herokuapp.com/");
     const res = await response.json();
     setProd(res);
     setPosts(prod);
@@ -33,9 +32,9 @@ export default function Products(props) {
       <div className="produ">
         {currentPosts.map((prods) => (
           <CardProduct
-            key={prods.title}
+            key={prods._id}
             title={prods.title}
-            image={prods.image}
+            image={prods.imageLink}
             price={prods.price}
             desc={prods.description}
             updateCartCount={props.updateCartCount}
