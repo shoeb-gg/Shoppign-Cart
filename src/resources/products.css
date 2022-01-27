@@ -18,3 +18,21 @@
 .page-link {
   cursor: pointer;
 }
+
+.waitin {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-top: 300px;
+}
+.spinn {
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 20px;
+}
+.waitin2 {
+  text-align: center;
+  width: 100%;
+}

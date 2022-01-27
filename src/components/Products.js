@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import CardProduct from "./Card";
 import style from "../resources/products.css";
 import Pagination from "./Pagination";
+import Spinner from "react-bootstrap/Spinner";
 
 export default function Products(props) {
   const [prod, setProd] = useState([]);
   const [posts, setPosts] = useState();
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(8);
+  const [load, setLoad] = useState(true);
 
   useEffect(() => {
     getData();
@@ -19,6 +21,7 @@ export default function Products(props) {
     const res = await response.json();
     setProd(res);
     setPosts(prod);
+    setLoad(false);
   };
 
   const indexOfLastPost = currentPage * postsPerPage;
@@ -27,6 +30,13 @@ export default function Products(props) {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  if (load)
+    return (
+      <div className="waitin">
+        <Spinner className="spinn" animation="grow" variant="danger" />
+        <h2 className="waitin2">Wait till finish loadin boi...</h2>
+      </div>
+    );
   return (
     <div>
       <div className="produ">
